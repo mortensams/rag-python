@@ -9,6 +9,7 @@ from llama_index.vector_stores.milvus import MilvusVectorStore
 
 # set the openai api key
 openai.api_key = os.getenv("OPENAPI_API_KEY")
+print(openai.api_key)
 
 # get question
 question = sys.argv[1] 

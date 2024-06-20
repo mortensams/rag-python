@@ -1,6 +1,7 @@
 import openai
 import textwrap
 import sys
+import os
 
 from llama_index.core import SimpleDirectoryReader
 from llama_index.core import VectorStoreIndex, StorageContext

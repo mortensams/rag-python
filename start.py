@@ -6,10 +6,11 @@ from llama_index.core import SimpleDirectoryReader
 from llama_index.core import VectorStoreIndex, StorageContext
 from llama_index.vector_stores.milvus import MilvusVectorStore
 
-openai.api_key = "sk-proj-6WuYDjQJEuDYs0ZMHcE6T3BlbkFJCynlMic8wR9kW9TWxnel"
+# set the openai api key
+openai.api_key = sys.argv[1] 
 
 # get question
-question = sys.argv[1] 
+question = sys.argv[2] 
 print("Your question was: " + question)
 
 # load documents using Llamaindex

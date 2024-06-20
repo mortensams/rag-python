@@ -7,10 +7,10 @@ from llama_index.core import VectorStoreIndex, StorageContext
 from llama_index.vector_stores.milvus import MilvusVectorStore
 
 # set the openai api key
-openai.api_key = sys.argv[1] 
+openai.api_key = os.getenv("OPENAPI_API_KEY")
 
 # get question
-question = sys.argv[2] 
+question = sys.argv[1] 
 print("Your question was: " + question)
 
 # load documents using Llamaindex

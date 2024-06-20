@@ -15,7 +15,7 @@ question = sys.argv[1]
 print("Your question was: " + question)
 
 # load documents using Llamaindex
-documents = SimpleDirectoryReader("./documents/").load_data()
+documents = SimpleDirectoryReader("/workspace/docs/").load_data()
 print("Document ID:", documents[0].doc_id)
 
 # Create an index over the documnts

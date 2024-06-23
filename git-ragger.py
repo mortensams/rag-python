@@ -26,4 +26,4 @@ vector_store = MilvusVectorStore(uri=milvus_host, dim=1536,collection_name="git_
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 index = VectorStoreIndex.from_documents(documents, storage_context=storage_context)
 
-print("Done indexing " + documents.count() + "files")
+print("Done indexing")

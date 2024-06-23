@@ -25,5 +25,5 @@ client = MilvusClient("./milvus_demo.db")
 vector_store = MilvusVectorStore(uri=milvus_host, dim=1536,collection_name="git_ragger")
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 index = VectorStoreIndex.from_documents(documents, storage_context=storage_context)
-print(index.ref_doc_info)
+
 print("Done indexing " + documents.count() + "files")

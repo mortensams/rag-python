@@ -22,7 +22,8 @@ documents = SimpleDirectoryReader(document_directory,filename_as_id=True).load_d
 client = MilvusClient("./milvus_demo.db")
 
 # Create an index over the documnts
-vector_store = MilvusVectorStore(uri=milvus_host, dim=1536,collection_name="git_ragger")
+vector_store = MilvusVectorStore(uri=milvus_host, dim=1536,collection_name="git_ragger",overwrite=True)
+
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 index = VectorStoreIndex.from_documents(documents, storage_context=storage_context)
 

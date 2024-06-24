@@ -17,7 +17,7 @@ if not milvus_host: milvus_host = "./milvus_demo.db"
 if not document_directory: document_directory="./documents"
 print("Milvus host is:" + milvus_host)
 # load documents using Llamaindex
-documents = SimpleDirectoryReader(document_directory).load_data()
+documents = SimpleDirectoryReader(document_directory,filename_as_id=True).load_data()
 
 client = MilvusClient("./milvus_demo.db")
 

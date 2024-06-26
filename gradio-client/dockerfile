@@ -1,0 +1,12 @@
+FROM python:3.8-slim
+
+WORKDIR /usr/src/app
+COPY . .
+RUN pip install --no-cache-dir gradio
+RUN pip install llama_index
+RUN pip install pymilvus
+RUN pip install llama-index-vector-stores-milvus
+EXPOSE 7860
+ENV GRADIO_SERVER_NAME="0.0.0.0"
+
+CMD ["python", "query.py"]
